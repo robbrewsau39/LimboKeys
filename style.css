@@ -1,0 +1,139 @@
+@font-face{
+    font-family: 'Renogare';
+    src: url('./Renogare-Regular.woff2')
+}
+
+/* This and the background-attatchment property are used to help the background image stay fixed when the user scrolls or content gets added */
+html, body{
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    /*background-color: hsl(284, 49%, 64%); */
+    background-image: linear-gradient(45deg, hsl(165, 65%, 44%), hsl(216, 85%, 57%));
+    background-attachment: fixed;
+}
+
+.mainBtn{
+    background-color: hsl(284, 76%, 19%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 5px;
+}
+.mainBtn:hover{
+    background-color: hsl(284, 76%, 39%);
+}
+
+#btns{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#keyOptions{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+}
+
+label{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Renogare'
+}
+
+.title{
+    font-family: 'Renogare';
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Changing progress bar size */
+.progress-container{
+    width:100%;
+    background-color: #f3f3f3;
+}
+
+.progress-bar{
+    height: 8px;
+    background-color: #4caf50;
+    width: 0%; /* Dynamic width with video progress in JS */
+}
+
+#volumeHold{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#volumeHold button{
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#totalVolume{
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    font-family: monospace, sans-serif;
+    font-weight: bold;
+}
+
+#submitBtn:disabled{
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#scoreHold{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#scoreHold .score{
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto;
+}
+
+.footer{
+    font-family: 'Renogare';
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px;
+}
+
+footer{
+    background-color: hsl(0, 0%, 0%, 0.1);
+}
+
+a:visited{
+    color: hsl(288, 29%, 47%);
+}
+
+#winScore{
+    font: monospace;
+    background-color:hsl(109, 100%, 71%);
+    padding: 5px auto;
+}
+
+#loseScore{
+    font: monospace;
+    background-color:hsl(11, 90%, 60%);
+    padding: 5px auto;
+}

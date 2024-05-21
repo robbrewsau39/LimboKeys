@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Limbo Keys project</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <h1 class="title">Limbo Keys</h1>
+        <video id="myVideo">
+            <source src="" type="video/mp4" style="display: none;">
+        </video><br>
+        
+        <div id="volumeHold">
+            <p id="totalVolume"></p><br>
+            <button onClick="quieter()">-</button>
+            <button onClick="louder()">+</button>
+            <button onClick="mute()">Mute</button>
+            <button onClick="play()" id="playBtn">Play</button>
+        </div><br><br>
+
+        <img src="" id="keyImage" style="display: none; text-align: center; align-content: center; margin: auto; border: 0px;" width="125px" height="75px"><br>
+
+        <div id="btns">
+            <label for="keyOptions">Choose a key:</label>
+            <select name="keyOptions" id="keyOptions" onChange="renderImage()">
+                <option value="" hidden selected>Select a key</option>
+                <option value="Mint">Mint</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Blue">Blue</option>
+                <option value="Purple">Purple</option>
+                <option value="Pink">Pink</option>
+                <option value="Cyan">Cyan</option>
+                <option value="Red">Red</option>
+                <option value="Lime">Lime</option>
+            </select>
+
+            <button id="submitBtn" onClick="userSelect()" class="mainBtn">Confirm</button>
+            <button onClick="fetchVideo()" class="mainBtn" id="">Get new video</button><br><br><br>
+        </div>
+        
+        <h1 id="result" style="font-family: 'Renogare'; margin: 0px 30px;">Result: </h1>
+
+        <div id="scoreHold">
+            <h3 id="winScore" class="score">Wins: 0</h3>
+            <h3 id="loseScore" class="score">Losses: 0</h3>
+        </div><br><br><br>
+
+        <footer>
+            <p class="footer">Info</h1><br>
+            <p style="text-indent: 5%; font-size: 1.2rem; font-family: 'Renogare'; margin: 0px 25px"><b>Big thank you to <a href="https://x.com/MWafflz" target="_blank">MrWafflz on Twitter</a> for inspiring me from their account <a href="https://x.com/Daily_Limbo" target="_blank">Daily Limbo Keys</a> and for giving me the raw footage file! Also thank you to <a href="https://www.youtube.com/watch?v=h3qn4T_xq6k"BradenBowl>BradenBowl</a> for their video helping with every combo! It helped a lot with setting everything up.</b></p><br>
+
+
+            <h2 style="align-content: center; text-align: center; font-family: Renogare; font-size: 1.2rem">How to play:</h2><br>
+            <p style="text-indent: 5%; font-family: 'Renogare'; margin: 0px 25px;">Press the "Get new video button to generate the video. When you're ready, press play for it to start. When the video starts, a key will highlight. Follow it until the end. When all of the keys stop shuffling, they turn into a color again. In the dropdown menu, select the key you think it is, and press submit.</p><br><br>
+
+            <h2 style="align-content: center; text-align: center; font-family: Renogare; font-size: 1.2rem">Some yapping:</h2><br>
+            <p style="text-indent: 5%; font-family:'Renogare'; margin: 0px 25px;">I made this project for my final of my advanced programming class. This isn't anything too fancy, just uses some different resources like a local database, using a JSON file, and some other little knick knacks. I also created my own UI for the playback of the video because I didn't want people to be able to skip back and forth, I think it would take away from the whole idea. There are only a total 24 videos (as of right now) to not have too many files. That's all I can really yap about, so have fun :)</p>
+        </footer>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
